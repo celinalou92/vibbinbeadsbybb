@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <Box display="flex">
             <Box>
-                Hello
+            {/* <Image width={600} height={600}src={`/images/BB_logo_horizontal.png`} alt={"Beads By BB"}/> */}
             </Box>
             <Box>
                 <Typography variant="h1">
