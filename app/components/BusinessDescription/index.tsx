@@ -1,18 +1,15 @@
-import { Box, Container } from "@mui/material";
+import StyledCard from "../StyledCard";
 
-const BusinessDescription = () => {
+export default function OwnerDescription() {
+    const cardContent = {
+        contentHeader: "Stay Thriving",
+        contentText: "Lizards are a widespread group of squamate reptiles, ranging across all continents except Antarctica",
+        cardMedia: "images/Vibbin_Beads.png"
+    }
     return (
-        <Container
-        sx={{display:"flex"}}
-        >
-            <Box>
-                Owner Card
-            </Box>
-            <Box>
-                Jewlery 
-            </Box>
-        </Container>
+        <StyledCard 
+        contentHeader={cardContent.contentHeader} 
+        contentText={cardContent.contentText}
+        cardMedia={cardContent.cardMedia} />
     );
 };
-
-export default BusinessDescription;

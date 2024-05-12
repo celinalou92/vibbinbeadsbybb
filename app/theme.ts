@@ -16,17 +16,21 @@ const badScript = Bad_Script({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#ED4D88",
+      main: "#D918B9",
     },
     secondary: {
-      main: "#4DC8ED",
+      main: "#fff",
     },
     error: {
       main: "#ff8080",
     },
     info: {
       main: "#ffff80",
-    }
+    },
+    background: {
+      default: "transparent",
+      paper: "#fff"
+    }, 
   },
   typography: {
     fontFamily: playfairDisplay.style.fontFamily,
@@ -40,6 +44,15 @@ const theme = createTheme({
       fontSize: "1.5em",
     },
   },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent'
+        }
+      }
+    }
+  }
 });
 
 export default theme;
