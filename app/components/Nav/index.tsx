@@ -2,9 +2,7 @@ import { Container } from "@mui/material";
 
 const Nav = () => {
     return(
-        <Container
-        sx={{height:"30vh"}}
-        >
+        <Container>
             NAVBAR
         </Container>
     )
