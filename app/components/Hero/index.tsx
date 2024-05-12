@@ -10,7 +10,6 @@ const Hero = () => {
 
     const DotDecorator = () => {
         const dotsCount = isMobile ? 10 : isTablet ? 15 : 20;
-        console.log("Dots count", dotsCount)
         return (
             <Typography component="div" 
             variant={isMobile ? "body1" : "h5"} 
@@ -32,7 +31,8 @@ const Hero = () => {
                     alt="Beads By BB"
                 />
             </Box>
-            <Box width={{ xs: '100%', sm: '40%' }} sx={{overflow:"hidden"}}>
+            <Box width={{ xs: '100%', sm: '40%' }} 
+            sx={{overflow:"hidden"}}>
                 <Typography variant="h1">
                     Welcome!
                 </Typography>
