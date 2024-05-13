@@ -18,12 +18,12 @@ const itemData = [
 
 const FindUs = () => {
     return (
-        <Stack>
+        <Stack marginY={4} justifyContent={"center"} alignItems={"center"}>
             <Typography 
             variant="h1" 
             color="text.secondary"
             >
-                Find Us
+                Find Us!
             </Typography>
             <BasicMasonry 
             itemData={itemData}

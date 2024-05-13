@@ -2,28 +2,30 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import OwnerDescription from "./components/BusinessDescription";
 import FindUs from "./components/FindUs";
-import { Grid } from "@mui/material";
+import { Button, Grid, Stack } from "@mui/material";
 import Carousel from "./components/Carousel";
-import BasicMasonry from "./components/BasicMasonary";
 
 export default function Home() {
+  const buttonArray = ["Single Bracelets", "Bracelets Sets", "Featured Bracelets", "Contact Me"]
+
   return (
     <>
       <Nav />
       <Hero />
-      <Grid container>
-        <Grid item md={6}>
+      <Grid container alignItems={"center"} justifyContent={"center"} rowGap={2}>
+        <Grid item md={4}>
           <OwnerDescription />
         </Grid>
         <Grid item md={4}>
-          <Carousel slides={[]} />
+          <Carousel/>
         </Grid>
-        <Grid item md={2}>
-          buttons
+        <Grid item md={4}>
+          {buttonArray.map((item, index) => (
+            <Stack margin={2} key={index}>
+              <Button>{item}</Button>
+            </Stack>
+          ))}
         </Grid>
-      </Grid>
-      <Grid container>
-        <FindUs/>
       </Grid>
       <FindUs />
     </>

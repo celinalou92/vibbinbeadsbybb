@@ -1,8 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Stack, makeStyles } from '@mui/material';
-import { Button, Card, CardMedia } from '@mui/material';
-import StyledCard from '../StyledCard';
+import { CardActionArea, Stack, Button, Card, CardMedia, Slide, CardContent } from '@mui/material';
 
 const caroselStyles = {
     carousel: {
@@ -10,7 +8,7 @@ const caroselStyles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: '400px',
-        width: '600px',
+        maxWidth: '600px',
         margin: '0 auto',
     },
     card: {
@@ -29,52 +27,64 @@ const caroselStyles = {
     },
 };
 
-interface CarouselProps {
-    slides: { image: string; link: string }[];
-}
+const slides = [
+    {
+        image: "images/Vibbin_Beads.png",
+        link: ""
+    },
+    {
+        image: "images/Vibbin_Beads.png",
+        link: ""
+    },
+    {
+        image: "images/Vibbin_Beads.png",
+        link: ""
+    },
+]
 
-const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+const Carousel = () => {
+    const containerRef = React.useRef<HTMLElement>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handleNextSlide = () => {
+        console.log(slides[currentSlide].image)
         setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
     };
 
     const handlePrevSlide = () => {
+        console.log(slides[currentSlide].image)
         setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
     };
-    const cardContent = {
-        contentHeader: "Stay Thriving",
-        contentText: "Lizards are a widespread group of squamate reptiles, ranging across all continents except Antarctica",
-        cardMedia: "images/Vibbin_Beads.png"
-    }
 
     return (
-        <Stack>
-            <StyledCard 
-            contentHeader={cardContent.contentHeader} 
-            contentText={cardContent.contentText} cardMedia={cardContent.cardMedia}
-            />
-
-            <Card sx={{...caroselStyles.card}}>
-                {/* <CardActionArea component="a" href={slides[currentSlide].link} target="_blank"> */}
-                    <CardMedia
-                        sx={{...caroselStyles.cardMedia}}
-                        component="img"
-                        // image={slides[currentSlide].image}
-                        // alt={`Slide ${currentSlide + 1}`}
-                    />
+        <Card component="div" sx={{
+            ...caroselStyles.card
+        }}
+            ref={containerRef as React.RefObject<HTMLDivElement>}
+        >
+            <Slide container={containerRef.current} direction="right" in={true} mountOnEnter unmountOnExit>
+                {/* <CardActionArea
+                        component="a"
+                        href={slides[currentSlide].link}
+                        target="_blank"> */}
+                <CardMedia
+                    height={200}
+                    sx={{ ...caroselStyles.cardMedia }}
+                    component="img"
+                    image={slides[currentSlide].image}
+                    alt={`Slide ${currentSlide + 1}`}
+                />
                 {/* </CardActionArea> */}
-            </Card>
-            <Stack sx={{...caroselStyles.navigation}}>
+            </Slide>
+            <CardContent>
                 <Button variant="contained" color="secondary" onClick={handlePrevSlide}>
                     Previous
                 </Button>
                 <Button variant="contained" color="secondary" onClick={handleNextSlide}>
                     Next
                 </Button>
-            </Stack>
-        </Stack>
+            </CardContent>
+        </Card>
     );
 };
 

@@ -1,12 +1,13 @@
 "use client";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CardMedia from '@mui/material/CardMedia';
+import {images} from '@/app/data/index';
 
 const Hero = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
-
+    console.log(images)
 
     const DotDecorator = () => {
         const dotsCount = isMobile ? 10 : isTablet ? 15 : 20;
@@ -27,7 +28,7 @@ const Hero = () => {
                 <CardMedia
                     component="img"
                     height="100%"
-                    image={isMobile ? "/images/Vibbin_Beads.png" : "/images/BB_logo_horizontal.png"}
+                    image={isMobile ? images.brand.logoV.src : images.brand.logoV.src}
                     alt="Beads By BB"
                 />
             </Box>

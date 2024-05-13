@@ -51,6 +51,17 @@ const theme = createTheme({
           backgroundColor: 'transparent'
         }
       }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff",
+          border: "1px solid black",
+          borderRadius: 0,
+          textDecoration: "uppercase",
+          color: "#101218"
+        }
+      }
     }
   }
 });
