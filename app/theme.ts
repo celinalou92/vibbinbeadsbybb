@@ -36,12 +36,15 @@ const theme = createTheme({
     fontFamily: playfairDisplay.style.fontFamily,
     h1: {
       fontFamily: badScript.style.fontFamily,
-      fontSize: "3em",
+      fontSize: "2em",
     },
     body1: {
       fontFamily: playfairDisplay.style.fontFamily,
-      fontWeight: "500",
       fontSize: "1.5em",
+    },
+    body2: {
+      fontFamily: playfairDisplay.style.fontFamily,
+      fontSize: "1em",
     },
   },
   components: {
