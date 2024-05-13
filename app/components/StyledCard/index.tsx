@@ -9,7 +9,7 @@ interface StyledCardProps {
 
 export default function StyledCard({contentHeader, contentText, cardMedia}: StyledCardProps) {
     return (
-        <Card sx={{ maxWidth: 345 }} >
+        <Card sx={{ maxWidth: 345 }} elevation={0}>
             <CardMedia
                 component="img"
                 height="50%"

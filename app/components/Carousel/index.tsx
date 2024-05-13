@@ -1,6 +1,9 @@
 'use client'
 import React, { useState } from 'react';
-import { CardActionArea, Stack, Button, Card, CardMedia, Slide, CardContent } from '@mui/material';
+import { Button, Card, CardMedia, Slide, CardContent, IconButton } from '@mui/material';
+import { images } from '@/app/data/index';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const caroselStyles = {
     carousel: {
@@ -27,24 +30,22 @@ const caroselStyles = {
     },
 };
 
-const slides = [
-    {
-        image: "images/Vibbin_Beads.png",
-        link: ""
-    },
-    {
-        image: "images/Vibbin_Beads.png",
-        link: ""
-    },
-    {
-        image: "images/Vibbin_Beads.png",
-        link: ""
-    },
-]
-
 const Carousel = () => {
     const containerRef = React.useRef<HTMLElement>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const products = images.products;
+
+    const getSlidesFromProducts = (products: Product[]): Slide[] => {
+        return products.map((product) => {
+            return {
+                image: product.image,
+                link: product.link
+            };
+        });
+    };
+
+    const slides = getSlidesFromProducts(products)
 
     const handleNextSlide = () => {
         console.log(slides[currentSlide].image)
@@ -57,32 +58,49 @@ const Carousel = () => {
     };
 
     return (
-        <Card component="div" sx={{
-            ...caroselStyles.card
+        <Card component="div" elevation={0} sx={{
+            ...caroselStyles.card,
+            position: "relative",
         }}
             ref={containerRef as React.RefObject<HTMLDivElement>}
         >
             <Slide container={containerRef.current} direction="right" in={true} mountOnEnter unmountOnExit>
-                {/* <CardActionArea
-                        component="a"
-                        href={slides[currentSlide].link}
-                        target="_blank"> */}
                 <CardMedia
-                    height={200}
-                    sx={{ ...caroselStyles.cardMedia }}
+                    sx={{
+                        ...caroselStyles.cardMedia,
+                    }}
                     component="img"
                     image={slides[currentSlide].image}
                     alt={`Slide ${currentSlide + 1}`}
                 />
-                {/* </CardActionArea> */}
             </Slide>
             <CardContent>
-                <Button variant="contained" color="secondary" onClick={handlePrevSlide}>
-                    Previous
-                </Button>
-                <Button variant="contained" color="secondary" onClick={handleNextSlide}>
-                    Next
-                </Button>
+                <IconButton
+                    sx={{
+                        ...caroselStyles.navigation,
+                        position: "absolute",
+                        zIndex: 1,
+                        top: '50%',
+                        left: '0',
+                    }}
+                    color="secondary"
+                    onClick={handlePrevSlide}
+                >
+                    <ArrowBackIcon />
+                </IconButton>
+                <IconButton
+                    sx={{
+                        ...caroselStyles.navigation,
+                        position: "absolute",
+                        zIndex: 1,
+                        top: '50%',
+                        right: '0',
+                    }}
+                    color="secondary"
+                    onClick={handleNextSlide}
+                >
+                    <ArrowForwardIcon />
+                </IconButton>
             </CardContent>
         </Card>
     );

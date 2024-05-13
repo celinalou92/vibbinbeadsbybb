@@ -1,9 +1,11 @@
-import BB_logo_horizontal from "@/public/images/BB_logo_horizontal.png";
-import Vibbin_Beads from "@/public/images/Vibbin_Beads.png";
-import GoldSpecialty from "@/public/images/gold_speciality.jpeg"
-import GoldBeadSize from "@/public/images/gold_bead_sizes.jpeg"
-import PurpleSpecialty from "@/public/images/purple_speciality.jpeg"
-import SportsTheme from "@/public/images/sports_1.jpeg"
+const BB_logo_horizontal = "/images/BB_logo_horizontal.png";
+const Vibbin_Beads = "/images/Vibbin_Beads.png";
+const GoldSpecialty = "/images/gold_speciality.jpg"
+const GoldBeadSize = "/images/gold_bead_sizes.jpg"
+const PurpleSpecialty = "/images/purple_speciality.jpg"
+const SportsTheme = "/images/sports_x.jpg"
+const GenerationRings = "/images/generation_ring.jpg"
+const SportsTheme2 = "/images/sports_theme_2.jpg"
 
 export const images = {
     brand: {
@@ -11,24 +13,42 @@ export const images = {
         logoV: Vibbin_Beads,
         fav: ""
     },
-    products: {
-        singleBracelets: [
-            {
-                img: GoldSpecialty,
-                alt: ""
-            }
-        ],
-        braceletSets: [
-            {
-                img: GoldBeadSize,
-                alt: ""
-            }
-        ],
-        featuredBracelets: [
-            {
-                img: SportsTheme,
-                alt: ""
-            }
-        ]
-    }
+    products: [
+        {
+            product: "Single Bracelets",
+            image: GoldBeadSize,
+            alt: "Single Bracelets",
+            link: ""
+        },
+        {
+            product: "Bracelet Sets",
+            image: PurpleSpecialty,
+            alt: "Bracelet Sets",
+            link: ""
+        },
+        {
+            product: "Featured Bracelets",
+            image: SportsTheme,
+            alt: "Featured Bracelets",
+            link: ""
+        },
+        {
+            product: "Generation Rings",
+            image: GenerationRings,
+            alt: "Generation Rings",
+            link: ""
+        },
+        {
+            product: "Gold Specialty",
+            image: GoldSpecialty,
+            alt: "Gold Specialty",
+            link: ""
+        },
+        {
+            product: "Sports Theme 2",
+            image: SportsTheme2,
+            alt: "Sports Theme 2",
+            link: ""
+        }
+    ]
 }

@@ -23,12 +23,12 @@ const Hero = () => {
     }
 
     return (
-        <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }}>
+        <Box display="flex" alignContent={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
             <Box width={{ xs: '100%', sm: '60%' }} height={{ sm: '100%' }}>
                 <CardMedia
                     component="img"
-                    height="100%"
-                    image={isMobile ? images.brand.logoV.src : images.brand.logoV.src}
+                    // height=""
+                    image={isMobile ? images.brand.logoV : images.brand.logoV}
                     alt="Beads By BB"
                 />
             </Box>
