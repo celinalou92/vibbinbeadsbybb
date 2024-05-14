@@ -30,7 +30,10 @@ const itemData = [
 
 const FindUs = () => {
     return (
-        <Stack marginY={4} justifyContent={"center"} alignItems={"center"}>
+        <Stack id="find-us" marginY={2} justifyContent={"center"} alignItems={"center"}>
+            <br/>
+            <br/>
+            <br/>
             <Typography 
             variant="h1" 
             >

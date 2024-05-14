@@ -12,7 +12,7 @@ const Hero = () => {
 
 
     return (
-        <Box display="flex" justifyContent={"center"} alignItems={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
+        <Box id="hero" display="flex" justifyContent={"center"} alignItems={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
             <Box width={{ xs: '100%', sm: '60%' }} height={{ sm: '100%' }}>
                 <CardMedia
                     component="img"

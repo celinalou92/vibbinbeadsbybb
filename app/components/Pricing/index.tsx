@@ -5,7 +5,9 @@ import DotDecorator from '../DotDecorator';
 
 const Pricing = () => {
     return (
-        <Stack direction="column" spacing={2} >
+        <Stack direction="column" spacing={2}  id="pricing">
+            <br/>
+            <br/>
             <br/>
             <Stack spacing={1} textAlign={"center"}>
                 <Typography variant="h1">Pricing</Typography>

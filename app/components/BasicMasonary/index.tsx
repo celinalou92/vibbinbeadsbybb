@@ -14,7 +14,7 @@ interface BasicMasonryProps {
 
 export default function BasicMasonry( {itemData} : BasicMasonryProps) {
     return (
-        <Box sx={{ width: "auto", minHeight: 829 }}>
+        <Box sx={{ width: "auto"}}>
             <br/>
             <Masonry columns={3}>
                 {itemData.map((item, index) => (
