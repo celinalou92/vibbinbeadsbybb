@@ -42,6 +42,10 @@ const theme = createTheme({
       fontFamily: playfairDisplay.style.fontFamily,
       fontSize: "20px",
     },
+    h6: {
+      fontFamily: playfairDisplay.style.fontFamily,
+      fontSize: "18px",
+    },
     body1: {
       fontFamily: playfairDisplay.style.fontFamily,
       fontSize: "16px",

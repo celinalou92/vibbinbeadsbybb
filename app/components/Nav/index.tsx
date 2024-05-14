@@ -13,6 +13,11 @@ const Nav = () => {
                         </Link>
                     </Typography>
                     <Stack direction={"row"} columnGap={2}>
+                        <Link href="#hero" color="primary" underline="none" sx={{ mx: 1 }}>
+                            <Typography variant="h6">
+                                Vibin Beads By BB
+                            </Typography>
+                        </Link>
                         <Link href="#pricing" color="primary" underline="none" sx={{ mx: 1 }}>
                             <Typography variant="h6">
                                 Pricing
@@ -23,9 +28,9 @@ const Nav = () => {
                                 Find Us
                             </Typography>
                         </Link>
-                        <Link href="#contact" color="primary" underline="none" sx={{ mx: 1 }}>
+                        <Link href="#contact" color="text" underline="none" sx={{ mx: 1 }}>
                             <Typography variant="h6">
-                                Contact
+                            <a href="mailto:cwebservices@gmail.com">Email Us</a> 
                             </Typography>
                         </Link>
                     </Stack>

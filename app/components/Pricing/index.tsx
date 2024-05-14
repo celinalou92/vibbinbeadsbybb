@@ -15,7 +15,7 @@ const Pricing = () => {
                     All bracelets are custom made to order!
                     Pricing varies by bracelet size and bead type. 
                     </Typography>
-                    <Typography>
+                    <Typography color="primary">
                         Email us directly or DM us on instagram to start your order! 
                     </Typography>
                     <Typography>

@@ -7,9 +7,6 @@ import DotDecorator from "../DotDecorator";
 const Hero = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
-
-
 
     return (
         <Box id="hero" display="flex" justifyContent={"center"} alignItems={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
