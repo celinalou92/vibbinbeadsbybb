@@ -5,6 +5,7 @@ import FindUs from "./components/FindUs";
 import { Grid, Link, Typography } from "@mui/material";
 import Pricing from "./components/Pricing";
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <OwnerDescription />
         </Grid>
         <Grid item md={6}>
-          {/* <Carousel/> */}
+          <Carousel/>
         </Grid>
         <Pricing />
       </Grid>
