@@ -3,16 +3,28 @@ import BasicMasonry from "../BasicMasonary";
 
 const itemData = [
     {
-        image: '/images/Vibbin_Beads.png',
-        text: 'Creative Babe Market',
+        image: '/images/love-works.jpeg',
+        text: 'Love Works',
         buttonText: 'Read More',
-        date: 'December 12, 2023'
+        date: 'Febuary 10, 2024',
+        time: '8am - 11:30am',
+        location: 'Work Training Studio',
     },
     {
-        image: '/images/Vibbin_Beads.png',
+        image: '/images/creative-b.jpeg',
         text: 'Creative Babe Market',
         buttonText: 'Read More',
-        date: 'December 12, 2023'
+        date: 'December 2, 2023',
+        time: '11am - 3pm',
+        location: 'Coffee Dose Laguna Hills',
+    },
+    {
+        image: '/images/714-market.jpeg',
+        text: '714 Market',
+        buttonText: 'Read More',
+        date: 'November 25, 2023',
+        time: '10am - 3pm',
+        location: 'Work Training Studio',
     },
 ]
 
@@ -21,10 +33,16 @@ const FindUs = () => {
         <Stack marginY={4} justifyContent={"center"} alignItems={"center"}>
             <Typography 
             variant="h1" 
-            color="text.secondary"
             >
                 Find Us!
             </Typography>
+            <Typography 
+            variant="h2" 
+            color="text.secondary"
+            >
+                Pop Ups
+            </Typography>
+            <br/>
             <BasicMasonry 
             itemData={itemData}
             />

@@ -11,6 +11,14 @@ interface AccordionProps {
     expanded: string | false;
 }
 
+const accordionStyles = {
+    backgroundColor: "#fff",
+    borderBottom: "1px solid black",
+    borderLeft: "1px solid black",
+    borderRight: "1px solid black",
+    color: "#101218"
+}
+
 const PricingTable = () => {
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -37,7 +45,10 @@ const PricingTable = () => {
 
 const CustomAccordion = ({ handleChange, expanded }: AccordionProps) => {
     return (
-        <Accordion expanded={expanded === 'custom'} onChange={handleChange('custom')}>
+        <Accordion 
+        disableGutters
+        sx={{...accordionStyles, borderTop: "1px solid black"}}
+        expanded={expanded === 'custom'} onChange={handleChange('custom')}>
             <AccordionSummary
                 aria-controls="custom-content"
                 id="custom-header"
@@ -63,7 +74,10 @@ const CustomAccordion = ({ handleChange, expanded }: AccordionProps) => {
 
 const GoldAccordion = ({ expanded, handleChange }: AccordionProps) => {
     return (
-        <Accordion expanded={expanded === 'gold-filled'} onChange={handleChange('gold-filled')}>
+        <Accordion 
+        disableGutters
+        sx={accordionStyles}
+        expanded={expanded === 'gold-filled'} onChange={handleChange('gold-filled')}>
             <AccordionSummary
                 aria-controls="gold-filled-content"
                 id="gold-filled-header"
@@ -94,7 +108,10 @@ const GoldAccordion = ({ expanded, handleChange }: AccordionProps) => {
 
 const SilverAccordion = ({ expanded, handleChange }: AccordionProps) => {
     return (
-        <Accordion expanded={expanded === 'sterling-silver'} onChange={handleChange('sterling-silver')}>
+        <Accordion
+        disableGutters
+        sx={accordionStyles}
+        expanded={expanded === 'sterling-silver'} onChange={handleChange('sterling-silver')}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="sterling-silver-content"

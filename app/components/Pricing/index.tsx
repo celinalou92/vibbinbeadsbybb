@@ -1,13 +1,15 @@
-import { Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import PricingTable from '../PricingTable';
 import { pricing } from '@/app/data';
+import DotDecorator from '../DotDecorator';
 
 const Pricing = () => {
     return (
-        <Stack direction="row" spacing={2}>
-            <Stack>
-                <Typography variant="h4">Pricing</Typography>
-                <Typography variant="body1">
+        <Stack direction="column" spacing={2} >
+            <br/>
+            <Stack spacing={1} textAlign={"center"}>
+                <Typography variant="h1">Pricing</Typography>
+                <Typography>
                     All bracelets are custom made to order!
                     Pricing varies by bracelet size and bead type. 
                     </Typography>

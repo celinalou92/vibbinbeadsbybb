@@ -2,24 +2,14 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CardMedia from '@mui/material/CardMedia';
 import {images} from '@/app/data/index';
+import DotDecorator from "../DotDecorator";
 
 const Hero = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
-    const DotDecorator = () => {
-        const dotsCount = isMobile ? 10 : isTablet ? 15 : 20;
-        return (
-            <Typography component="div" 
-            variant={isMobile ? "h6" : "h4"} 
-            sx={{display:"flex", color:theme.palette.primary.main}}>
-                {Array.from({ length: dotsCount }, (_, i) => (
-                    <li key={i}><ul></ul></li>
-                ))}
-            </Typography>
-        );
-    }
+
 
     return (
         <Box display="flex" justifyContent={"center"} alignItems={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
@@ -35,7 +25,7 @@ const Hero = () => {
                 <Typography variant="subtitle1">
                     Welcome!
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="h2">
                     I’m Brittney and I am the one who makes your bracelets with ALL my love
                 </Typography>
                 <DotDecorator />

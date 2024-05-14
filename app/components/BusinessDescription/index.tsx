@@ -3,8 +3,8 @@ import StyledCard from "../StyledCard";
 export default function OwnerDescription() {
     const cardContent = {
         contentHeader: "Stay Thriving",
-        contentText: "Lizards are a widespread group of squamate reptiles, ranging across all continents except Antarctica",
-        cardMedia: "images/Vibbin_Beads.png"
+        contentText: "Welcome to Vibin Beads by BB! I'm Brittney and I am the one who makes your bracelets with ALL my love. I make each bracelet from hand, from high quality materials sourced from other small businesses!",
+        cardMedia: "images/owner-image.jpeg"
     }
     return (
         <StyledCard 

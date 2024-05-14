@@ -20,7 +20,7 @@ export default function StyledCard({contentHeader, contentText, cardMedia}: Styl
                 <Typography gutterBottom variant="h5" component="div" align="center">
                    {contentHeader}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" align="center">
+                <Typography variant="body2" align="center">
                     {contentText}
                 </Typography>
             </CardContent>

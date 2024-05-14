@@ -38,13 +38,17 @@ const theme = createTheme({
       fontFamily: badScript.style.fontFamily,
       fontSize: "2em",
     },
+    h2: {
+      fontFamily: playfairDisplay.style.fontFamily,
+      fontSize: "20px",
+    },
     body1: {
       fontFamily: playfairDisplay.style.fontFamily,
-      fontSize: "1.5em",
+      fontSize: "16px",
     },
     body2: {
       fontFamily: playfairDisplay.style.fontFamily,
-      fontSize: "1em",
+      fontSize: "14px",
     },
     subtitle1: {
       fontFamily: badScript.style.fontFamily,

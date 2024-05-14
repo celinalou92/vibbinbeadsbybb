@@ -14,8 +14,9 @@ interface BasicMasonryProps {
 
 export default function BasicMasonry( {itemData} : BasicMasonryProps) {
     return (
-        <Box sx={{ width: 500, minHeight: 829 }}>
-            <Masonry columns={2}>
+        <Box sx={{ width: "auto", minHeight: 829 }}>
+            <br/>
+            <Masonry columns={3}>
                 {itemData.map((item, index) => (
                     <div key={index}>
                         <StyledCard
