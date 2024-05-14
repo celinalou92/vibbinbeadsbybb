@@ -46,6 +46,10 @@ const theme = createTheme({
       fontFamily: playfairDisplay.style.fontFamily,
       fontSize: "1em",
     },
+    subtitle1: {
+      fontFamily: badScript.style.fontFamily,
+      fontSize: "1.5em",
+    },
   },
   components: {
     MuiPaper: {
