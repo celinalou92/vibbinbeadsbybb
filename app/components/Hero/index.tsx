@@ -7,14 +7,13 @@ const Hero = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
-    console.log(images)
 
     const DotDecorator = () => {
         const dotsCount = isMobile ? 10 : isTablet ? 15 : 20;
         return (
             <Typography component="div" 
-            variant={isMobile ? "body1" : "h5"} 
-            sx={{display:"flex"}}>
+            variant={isMobile ? "h6" : "h4"} 
+            sx={{display:"flex", color:theme.palette.primary.main}}>
                 {Array.from({ length: dotsCount }, (_, i) => (
                     <li key={i}><ul></ul></li>
                 ))}
@@ -23,18 +22,17 @@ const Hero = () => {
     }
 
     return (
-        <Box display="flex" alignContent={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
+        <Box display="flex" justifyContent={"center"} alignItems={"center"} flexDirection={{ xs: 'column', sm: 'row' }}>
             <Box width={{ xs: '100%', sm: '60%' }} height={{ sm: '100%' }}>
                 <CardMedia
                     component="img"
-                    // height=""
                     image={isMobile ? images.brand.logoV : images.brand.logoV}
                     alt="Beads By BB"
                 />
             </Box>
             <Box width={{ xs: '100%', sm: '40%' }} 
             sx={{overflow:"hidden"}}>
-                <Typography variant="h1">
+                <Typography variant="subtitle1">
                     Welcome!
                 </Typography>
                 <Typography variant="body1">

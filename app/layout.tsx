@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={playfairDisplay.className}>
+      <body className={playfairDisplay.className} style={{ padding: '0 20%' }}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             {children}
