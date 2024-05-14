@@ -1,6 +1,6 @@
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
-import OwnerDescription from "./components/BusinessDescription";
+import OwnerDescription from "./components/OwnerDescription";
 import FindUs from "./components/FindUs";
 import { Grid, Link, Typography } from "@mui/material";
 import Pricing from "./components/Pricing";
@@ -19,21 +19,22 @@ export default function Home() {
           <OwnerDescription />
         </Grid>
         <Grid item md={6}>
-          <Carousel/>
+          <Carousel />
         </Grid>
         <Pricing />
       </Grid>
       <br />
       <br />
       <FindUs />
-      <Typography textAlign="center" variant="h1" color="primary" sx={{ flexGrow: 1 }}>
-        <Link href="https://www.instagram.com/vibinbeadsbybb/"
-          color="primary" underline="none" target="_blank" rel="noreferrer">
-          <InstagramIcon fontSize="large" />
-        </Link>
-      </Typography>
-      <br/>
-      <br/>
+
+      <Link href="https://www.instagram.com/vibinbeadsbybb/"
+        color="primary" underline="none" target="_blank" rel="noreferrer"
+        sx={{ flexGrow: 1 }}>
+        <InstagramIcon fontSize="large" />
+      </Link>
+
+      <br />
+      <br />
     </>
   );
 }

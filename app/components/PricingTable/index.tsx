@@ -58,11 +58,11 @@ const CustomAccordion = ({ handleChange, expanded }: AccordionProps) => {
             </AccordionSummary>
             <AccordionDetails>
                 {customBracelet.stackPricing.map((stack, index) => (
-                    <div key={index}>
-                        <Typography>
+           
+                        <Typography key={index}>
                             {stack}
                         </Typography>
-                    </div>
+             
                 ))}
                 <Typography>
                     {customBracelet.addOnPricingText}

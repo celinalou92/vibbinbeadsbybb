@@ -28,9 +28,9 @@ const Nav = () => {
                                 Find Us
                             </Typography>
                         </Link>
-                        <Link href="#contact" color="text" underline="none" sx={{ mx: 1 }}>
+                        <Link href="mailto:cwebservices@gmail.com" color="text" underline="none" sx={{ mx: 1 }}>
                             <Typography variant="h6">
-                            <a href="mailto:cwebservices@gmail.com">Email Us</a> 
+                                Email Us
                             </Typography>
                         </Link>
                     </Stack>

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Card, CardMedia, Slide, CardContent, IconButton, MobileStepper } from '@mui/material';
+import { Card, CardMedia, Slide, CardContent, IconButton, MobileStepper, CardHeader, Typography } from '@mui/material';
 import { images } from '@/app/data/index';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -35,6 +35,7 @@ const Carousel = () => {
         return products.map((product) => {
             return {
                 image: product.image,
+                name: product.product,
                 link: product.link
             };
         });
@@ -73,15 +74,19 @@ const Carousel = () => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <Slide container={containerRef.current} direction="right" in={true} mountOnEnter unmountOnExit>
-                
-                <CardMedia
-                    sx={{
-                        ...caroselStyles.cardMedia,
-                    }}
-                    component="img"
-                    image={slides[currentSlide].image}
-                    alt={`Slide ${currentSlide + 1}`}
-                />
+                <div>
+                    <Typography variant="h5" textAlign={"center"}>
+                        {slides[currentSlide].name}
+                    </Typography>
+                    <CardMedia
+                        sx={{
+                            ...caroselStyles.cardMedia,
+                        }}
+                        component="img"
+                        image={slides[currentSlide].image}
+                        alt={`Slide ${currentSlide + 1}`}
+                    />
+                </div>
             </Slide>
             <CardContent>
                 <MobileStepper
@@ -92,25 +97,25 @@ const Carousel = () => {
                     sx={{ flexGrow: 1 }}
                     nextButton={
                         <IconButton
-                        sx={{
-                            ...caroselStyles.navigation
-                        }}
-                        color="secondary"
-                        onClick={handleNextSlide}
-                    >
-                        <ArrowForwardIosIcon fontSize="medium" />
-                    </IconButton>
+                            sx={{
+                                ...caroselStyles.navigation
+                            }}
+                            color="secondary"
+                            onClick={handleNextSlide}
+                        >
+                            <ArrowForwardIosIcon fontSize="medium" />
+                        </IconButton>
                     }
                     backButton={
                         <IconButton
-                        sx={{
-                            ...caroselStyles.navigation,
-                        }}
-                        color="secondary"
-                        onClick={handlePrevSlide}
-                    >
-                        <ArrowBackIosIcon fontSize="medium" />
-                    </IconButton>
+                            sx={{
+                                ...caroselStyles.navigation,
+                            }}
+                            color="secondary"
+                            onClick={handlePrevSlide}
+                        >
+                            <ArrowBackIosIcon fontSize="medium" />
+                        </IconButton>
                     }
                 />
             </CardContent>

@@ -17,6 +17,7 @@ export const images = {
     products: [
         {
             product: "Single Bracelets",
+            productName: "Single Bracelets",
             image: goldBeadSize,
             alt: "Single Bracelets",
             link: ""
@@ -30,7 +31,7 @@ export const images = {
         {
             product: "Theme Bracelets",
             image: sportsTheme,
-            alt: "Featured Bracelets",
+            alt: "Theme Bracelets",
             link: ""
         },
         {
@@ -46,9 +47,9 @@ export const images = {
             link: ""
         },
         {
-            product: "Sports Theme 2",
+            product: "Featured Bracelets",
             image: miniMama,
-            alt: "Sports Theme 2",
+            alt: "Featured Bracelets",
             link: ""
         }
     ]
