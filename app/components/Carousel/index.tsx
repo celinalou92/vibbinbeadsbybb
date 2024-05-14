@@ -31,6 +31,7 @@ const Carousel = () => {
 
     const products = images.products;
 
+    //@ts-ignore
     const getSlidesFromProducts = (products: Product[]): Slide[] => {
         return products.map((product) => {
             return {
