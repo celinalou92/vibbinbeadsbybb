@@ -17,7 +17,7 @@ export default function StyledCard({contentHeader, contentText, cardMedia}: Styl
                 alt="TODO"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" align="center">
+                <Typography gutterBottom component="div" align="center">
                    {contentHeader}
                 </Typography>
                 <Typography variant="body2" align="center">

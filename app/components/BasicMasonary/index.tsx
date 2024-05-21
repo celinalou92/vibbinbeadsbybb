@@ -16,7 +16,7 @@ export default function BasicMasonry( {itemData} : BasicMasonryProps) {
     return (
         <Box sx={{ width: "auto"}}>
             <br/>
-            <Masonry columns={3}>
+            <Masonry columns={3} >
                 {itemData.map((item, index) => (
                     <div key={index}>
                         <StyledCard

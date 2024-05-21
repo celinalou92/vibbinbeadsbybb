@@ -2,9 +2,9 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import OwnerDescription from "./components/OwnerDescription";
 import FindUs from "./components/FindUs";
-import { Grid, Link } from "@mui/material";
+import { Grid, Link, Stack } from "@mui/material";
 import Pricing from "./components/Pricing";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 import Carousel from "./components/Carousel";
 
 export default function Home() {
@@ -14,7 +14,12 @@ export default function Home() {
       <br />
       <br />
       <Hero />
-      <Grid container alignItems={"center"} justifyContent={"center"} rowGap={4}>
+      <Grid
+        container
+        alignItems={"center"}
+        justifyContent={"center"}
+        rowGap={4}
+      >
         <Grid item md={6}>
           <OwnerDescription />
         </Grid>
@@ -26,11 +31,17 @@ export default function Home() {
       <br />
       <br />
       <FindUs />
-      <Link href="https://www.instagram.com/vibinbeadsbybb/"
-        color="primary" underline="none" target="_blank" rel="noreferrer"
-        sx={{ flexGrow: 1 }}>
-        <InstagramIcon fontSize="large" />
-      </Link>
+      <Stack direction="row" justifyContent="center" alignItems="center" sx={{ flexGrow: 1 }}>
+        <Link
+          href="https://www.instagram.com/vibinbeadsbybb/"
+          color="primary"
+          underline="none"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <InstagramIcon fontSize="large" />
+        </Link>
+      </Stack>
       <br />
       <br />
     </>

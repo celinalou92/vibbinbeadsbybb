@@ -17,6 +17,7 @@ const Pricing = () => {
                 </Typography>
                 <Typography color="primary">
                     Email us directly or DM us on instagram to start your order!
+                    </Typography>
                     <Link href="https://www.instagram.com/vibinbeadsbybb/"
                         color="primary"
                         underline="none"
@@ -26,7 +27,6 @@ const Pricing = () => {
                         <InstagramIcon fontSize="large" />
                     </Link>
 
-                </Typography>
                 <Typography>
                     {pricing.paymentTerms}
                 </Typography>
