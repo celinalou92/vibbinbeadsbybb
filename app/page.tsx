@@ -1,11 +1,11 @@
-import Hero from "./components/Hero";
-import Nav from "./components/Nav";
-import OwnerDescription from "./components/OwnerDescription";
-import FindUs from "./components/FindUs";
+import Hero from "@components/Hero";
+import Nav from "@components/Nav";
+import OwnerDescription from "@components/OwnerDescription";
+import FindUs from "@components/FindUs";
 import { Grid, Link, Stack } from "@mui/material";
-import Pricing from "./components/Pricing";
+import Pricing from "@components/Pricing";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Carousel from "./components/Carousel";
+import Carousel from "@components/Carousel";
 
 export default function Home() {
   return (
