@@ -10,9 +10,6 @@ import Carousel from "@components/Carousel";
 export default function Home() {
   return (
     <>
-      <Nav />
-      <br />
-      <br />
       <Hero />
       <Grid
         container

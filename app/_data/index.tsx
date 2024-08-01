@@ -9,6 +9,12 @@ const sportsTheme2 = "/images/sports_theme_2.jpg"
 const miniMama = "/images/mini_mama.jpg"
 
 export const images = {
+    owner: {
+        headshot: {
+            src: "/images/owner-image.jpeg",
+            title: "The Owner of Vibin Beads By BB"
+        }
+    },
     brand: {
         logoH: bbLogoHorizontal,
         logoV: vibbinBeads,
