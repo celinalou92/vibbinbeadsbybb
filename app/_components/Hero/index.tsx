@@ -1,7 +1,7 @@
 "use client";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CardMedia from '@mui/material/CardMedia';
-import {images} from '@/app/data/index';
+import {images} from '@data/index';
 import DotDecorator from "../DotDecorator";
 
 const Hero = () => {

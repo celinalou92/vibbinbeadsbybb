@@ -1,6 +1,6 @@
 import { Stack, Typography, Link } from '@mui/material';
 import PricingTable from '../PricingTable';
-import { pricing } from '@/app/data';
+import { pricing } from '@data/index';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Pricing = () => {

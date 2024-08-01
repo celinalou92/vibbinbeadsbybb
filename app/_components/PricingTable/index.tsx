@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { Table, TableHead, TableRow, TableCell, TableBody, Typography, Accordion, AccordionDetails, AccordionSummary, Stack } from '@mui/material';
-import { pricing } from '@/app/data';
+import { pricing } from '@data/index';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const { goldFilled, sterlingSilver, customBracelet } = pricing;

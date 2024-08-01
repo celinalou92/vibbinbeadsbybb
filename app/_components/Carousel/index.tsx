@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Card, CardMedia, Slide, CardContent, IconButton, MobileStepper, CardHeader, Typography } from '@mui/material';
-import { images } from '@/app/data/index';
+import { images } from '@data/index';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
