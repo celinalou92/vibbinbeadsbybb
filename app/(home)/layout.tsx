@@ -4,6 +4,7 @@ import "@/globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/theme";
+import Nav from "@/_components/Nav";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 // const badScript = Bad_Script({ subsets: "latin"[] });
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={playfairDisplay.className} style={{ padding: "0 20%" }}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
+            <Nav/>
             <br />
             <br />
             {children}

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Bad_Script } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "@/globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/theme";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
-// const badScript = Bad_Script({ subsets: "latin"[] });
 
 export const metadata: Metadata = {
   title: "Vibin Beads By BB",
@@ -18,5 +17,17 @@ export default function LinkTreeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div style={{ border: "2px solid red" }}> {children}</div>;
+  return (
+    <html lang="en">
+      <body className={playfairDisplay.className}>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <br />
+            <br />
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
+  );
 }
