@@ -13,22 +13,10 @@ export const metadata: Metadata = {
   description: "High quality custom beaded jewelry",
 };
 
-export default function RootLayout({
+export default function LinkTreeLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={playfairDisplay.className} style={{ padding: "0 20%" }}>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <br />
-            <br />
-            {children}
-          </ThemeProvider>
-        </AppRouterCacheProvider>
-      </body>
-    </html>
-  );
+  return <div style={{ border: "2px solid red" }}> {children}</div>;
 }

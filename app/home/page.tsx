@@ -6,7 +6,7 @@ import Pricing from "@components/Pricing";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Carousel from "@components/Carousel";
 
-export default function App() {
+export default function Home() {
   return (
     <>
       <Hero />
