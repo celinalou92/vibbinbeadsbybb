@@ -19,13 +19,18 @@ export default function LinkTreeLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={playfairDisplay.className}>
+      <body
+        style={{
+          border: "1px solid red",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+        className={playfairDisplay.className}
+      >
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <br />
-            <br />
-            {children}
-          </ThemeProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

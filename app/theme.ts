@@ -16,6 +16,7 @@ const badScript = Bad_Script({
 const theme = createTheme({
   palette: {
     primary: {
+      //pink
       main: "#D918B9",
     },
     secondary: {
@@ -49,6 +50,7 @@ const theme = createTheme({
     body1: {
       fontFamily: playfairDisplay.style.fontFamily,
       fontSize: "16px",
+      lineHeight: "30px",
     },
     body2: {
       fontFamily: playfairDisplay.style.fontFamily,
@@ -70,11 +72,13 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#fff",
+          backgroundColor: "#000000",
           border: "1px solid black",
-          borderRadius: 0,
+          borderRadius: 4,
           textDecoration: "uppercase",
-          color: "#101218"
+          color: "#fff",
+          padding: "1rem",
+          filter: "drop-shadow(0 4px 4px rgba(0,0,0, .25))"
         }
       }
     }
