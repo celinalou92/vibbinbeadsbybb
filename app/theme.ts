@@ -77,7 +77,7 @@ const theme = createTheme({
           borderRadius: 4,
           textDecoration: "uppercase",
           color: "#fff",
-          padding: "1rem",
+          padding: ".5rem 1rem",
           filter: "drop-shadow(0 4px 4px rgba(0,0,0, .25))"
         }
       }

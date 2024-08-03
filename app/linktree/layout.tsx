@@ -21,7 +21,6 @@ export default function LinkTreeLayout({
     <html lang="en">
       <body
         style={{
-          border: "1px solid red",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

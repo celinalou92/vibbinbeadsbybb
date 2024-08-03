@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { images } from "@/_data";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import theme from "@/theme";
 
 export default function LinkTree() {
   return (
@@ -26,6 +25,7 @@ export default function LinkTree() {
       <Typography color="primary">
         DM us on Instagram to start your order!
       </Typography>
+      <br/>
       <Button fullWidth>Instagram</Button>
       <Button fullWidth>Bracelets & Pricing</Button>
       <Button fullWidth>This Name Market</Button>
