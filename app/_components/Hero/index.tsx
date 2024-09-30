@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CardMedia from '@mui/material/CardMedia';
 import {images} from '@data/index';
 import DotDecorator from "../DotDecorator";
-
+//test
 const Hero = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
